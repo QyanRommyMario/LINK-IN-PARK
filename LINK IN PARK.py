@@ -42,7 +42,20 @@ class ParkingLotGUI(tk.Tk):
         )
         self.car_type_label.pack()
         self.car_type_combo = ttk.Combobox(
-            self, values=["SUV", "MPV", "Sedan", "Truck", "Bus"], font=("Arial", 12)
+            self,
+            values=[
+                "SUV",
+                "MPV",
+                "Sedan",
+                "Truk",
+                "Bus",
+                "Double Cabin",
+                "Off Road",
+                "Wagon",
+                "Hatchback",
+                "Limousine",
+            ],
+            font=("Arial", 12),
         )
         # state="readonly")
         self.car_type_combo.pack()
@@ -108,6 +121,10 @@ class ParkingLotGUI(tk.Tk):
             "SUV",
             "Sedan",
             "MPV",
+            "Double Cabin",
+            "Off Road",
+            "Wagon",
+            "Hatchback",
         ]  # Jenis mobil yang diizinkan masuk parkiran
 
         if car_type in allowed_car_types:
